@@ -1,0 +1,22 @@
+{
+	"name": "MatiWojtekLokiec/samochody",
+	"description": "Projekt strony o samochodach",
+	"type": "project",
+	
+	"authors": [
+		{
+		"name": "Mati, Wojtek i Lokiec",
+		}
+	],
+	
+	"autoload" {
+		"psr-4": {
+			"App\\": "App/"
+		}
+	},
+	
+	"require": {
+		"ext-pdo": "*",
+		"bramus/router": "^1.5",
+	}
+}
