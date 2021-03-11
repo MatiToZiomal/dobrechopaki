@@ -1,0 +1,68 @@
+@startuml
+
+entity user {
+    * id: serial
+    --
+    * group_id: unsigned bigint
+    * username: text(32)
+    * password_hash: text
+    * salt: text
+    * last_login: timestamp
+    * created_at: timestamp
+}
+
+entity group {
+    * id: serial
+    --
+    * name:text(64)
+}
+
+entity permission {
+    * id
+    --
+    * name: text(64)
+}
+
+entity group_permission{
+    * composite_key(group_id, permission_id)
+    --
+    * group_id: unsigned bigint
+    * permission_id: unsigned bigint
+}
+
+entity user_search_data {
+    * id: serial
+    --
+    * user_id: bigint unsigned
+    * longitude: float(10,6)
+    * latitude: float(10,6)
+    * begin_date: timestamp
+    * end_date: timestamp
+    * created_at: timestamp
+}
+
+entity user_preference{
+    * id
+    --
+    * user_id: unsigned bigint
+    * name: text(32)
+    * value: text
+}
+
+entity user_dashboard {
+    * id
+    --
+    * user_id: unsigned bigint
+    * longitude: float(10,6)
+    * latitude: float(10,6)
+    * position: smallint
+}
+
+user --|{ user_search_data
+user --|{ user_dashboard
+group --|{ user
+group --|{ group_permission
+permission --|{ group_permission
+user --|{ user_preference
+
+@enduml
