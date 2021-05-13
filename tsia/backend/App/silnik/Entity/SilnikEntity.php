@@ -1,6 +1,6 @@
 <?php
 
-namespace App\User\Entity;
+namespace App\Silnik\Entity;
 
 use App\Database\Entity\Entity;
 
@@ -61,11 +61,11 @@ class SilnikEntity extends Entity {
     }
 
     /**
-     * @param mixed $id_silnika
+     * @param mixed $pojemnosc
      */
-    public function setIdSilnika($id_silnika)
+    public function setPojemnosc($pojemnosc)
     {
-        $this->id_silnika = $id_silnika;
+        $this->pojemnosc = $pojemnosc;
     }
 
     /**
@@ -77,12 +77,16 @@ class SilnikEntity extends Entity {
     }
 
     /**
-     * @param mixed $pojemnosc
+     * @param mixed $przebieg
      */
-    public function setPojemnosc($pojemnosc)
+    public function setPrzebieg($przebieg)
     {
-        $this->pojemnosc = $pojemnosc;
+        $this->przebieg = $przebieg;
     }
+
+
+
+
 
 
 }

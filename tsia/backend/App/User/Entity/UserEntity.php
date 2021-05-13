@@ -121,8 +121,4 @@ class UserEntity extends Entity {
     }
 
 
-    public function getIdSilnika()
-    {
-        // TODO: Implement getIdSilnika() method.
-    }
 }

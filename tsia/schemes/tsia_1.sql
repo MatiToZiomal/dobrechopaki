@@ -58,7 +58,7 @@ CREATE TABLE `samochod` (
 
 CREATE TABLE `serwis` (
   `id_serwisu` bigint(20) UNSIGNED NOT NULL,
-  `id_użytkownika` bigint(11) UNSIGNED NOT NULL,
+  `id_uzytkownika` bigint(11) UNSIGNED NOT NULL,
   `id_samochodu` bigint(11) UNSIGNED NOT NULL,
   `zdjecie_samochodu` longblob NOT NULL,
   `ilosc_punktow` int(11) NOT NULL
